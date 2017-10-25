@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="B4.PE2.OmedMilat.App">
+	<Application.Resources>
+
+        <ResourceDictionary>
+            <Color x:Key="ColorError">#f46842</Color>
+
+            <OnPlatform x:Key="ErrorMessageFontSize" x:TypeArguments="NamedSize">
+                <On Platform="iOS, Android" Value="Small"></On>
+                <On Platform="Windows" Value="Micro"></On>
+            </OnPlatform>
+
+            <Style x:Key="ErrorMessage" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorError}" />
+                <Setter Property="FontSize" Value="{StaticResource ErrorMessageFontSize}" />
+                <Setter Property="Margin" Value="2,-5,7,0" />
+                <Setter Property="IsVisible" Value="False" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

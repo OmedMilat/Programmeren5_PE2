@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="B4.PE2.OmedMilat.FeedBackPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView HasUnevenRows="True" >
+                <TableRoot>
+                    <TableSection Title="Feedback">
+                        <EntryCell  x:Name="txtName" Label="Naam en Voornaam" Keyboard="Text" />
+                        <Label x:Name="lblErrorName" Style="{StaticResource ErrorMessage}" />
+                        <EntryCell x:Name="txtEmail" Label="E-mail" Keyboard="Email" />
+                        <Label x:Name="lblErrorEmail" Style="{StaticResource ErrorMessage}" />
+                        <EntryCell x:Name="txtTelNr" Label="Tel. Nummer" Keyboard="Default" />
+                        <Label x:Name="lblErrorTelNr" Style="{StaticResource ErrorMessage}" />
+                        <EntryCell x:Name="txtGeboorte" Label="Geboortedatum" Placeholder="dd-mm-yyyy" Keyboard="Default" />
+                        <Label x:Name="lblErrorGeboorte" Style="{StaticResource ErrorMessage}" />
+                        <ViewCell  x:Name="PkrOnderwerp">
+                            <Picker Title="Onderwerp">
+                                <Picker.Items>
+                                    <x:String>Facturering/Verkoop</x:String>
+                                    <x:String>Technisch defect</x:String>
+                                    <x:String>Andere</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </ViewCell>
+                        <Label x:Name="lblErrorOnderwerp" Style="{StaticResource ErrorMessage}" />
+                        <ViewCell>
+                            <Editor x:Name="txtBericht" HeightRequest="80" ></Editor>
+                        </ViewCell>
+                        <Label x:Name="lblErrorBericht" Style="{StaticResource ErrorMessage}" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

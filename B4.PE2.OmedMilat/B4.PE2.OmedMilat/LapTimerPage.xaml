@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="B4.PE2.OmedMilat.LapTimerPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="0:00.00" Font="50" HorizontalOptions="Center" x:Name="lblTimer" Grid.ColumnSpan="2"></Label>
+            <StackLayout  x:Name="StackLeft" Grid.Row="1" Padding="20,30,0,0">
+            </StackLayout>
+            <StackLayout  x:Name="StackRight" Grid.Row="1" Grid.Column="1" Padding="0,30,20,0" HorizontalOptions="End"  >
+            </StackLayout>
+            <Button Grid.Row="2" x:Name="btnStart" Text="Start" Clicked="btnStart_Clicked"/>
+            <Button Grid.Row="2" Grid.Column="1" x:Name="btnStop" Text="Stop" Clicked="btnStop_Clicked"/>
+            <Button Grid.Row="3" Grid.ColumnSpan="2" x:Name="btnLap" Text="Lap" Clicked="btnLap_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
